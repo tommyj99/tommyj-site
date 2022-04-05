@@ -45,7 +45,7 @@ const Blog = () => {
           }}
           variant="h4"
         >
-          Blog/How To's
+          Blog/How To
         </Typography>
         <Typography
           style={{
