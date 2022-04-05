@@ -1,5 +1,5 @@
 const Footer = (props) => {
-  return <footer className={props.styles}>This is the footer</footer>;
+  return <footer className={props.styles}></footer>;
 };
 
 export default Footer;

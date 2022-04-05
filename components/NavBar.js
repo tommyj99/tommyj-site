@@ -1,5 +1,5 @@
 const NavBar = (props) => {
-  return <nav className={props.styles}>This is the Header</nav>;
+  return <nav className={props.styles}></nav>;
 };
 
 export default NavBar;
