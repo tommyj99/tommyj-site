@@ -46,7 +46,9 @@ const Portfolio = () => {
         >
           Portfolio Projects
         </Typography>
-        <Button onClick={() => router.push("http://localhost:4000")}>
+        <Button
+          onClick={() => router.push("https://news-site-tommyj99.vercel.app/")}
+        >
           News Page
         </Button>
       </Box>
