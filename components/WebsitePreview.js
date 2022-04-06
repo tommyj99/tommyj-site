@@ -30,8 +30,14 @@ const WebsitePreview = (props) => {
   };
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardHeader title={props.title} />
+    <Card
+      sx={{
+        maxWidth: 345,
+        padding: "5px",
+        backgroundColor: "black",
+      }}
+    >
+      <CardHeader className={styles.cardtext} title={props.title} />
       <a href={props.url}>
         <CardMedia
           className={styles.border}
@@ -42,12 +48,13 @@ const WebsitePreview = (props) => {
         />
       </a>
       <CardContent>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" className={styles.cardtext}>
           {props.description}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <ExpandMore
+          className={styles.cardtext}
           expand={expanded}
           onClick={handleExpandClick}
           aria-expanded={expanded}
@@ -58,7 +65,19 @@ const WebsitePreview = (props) => {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>{props.explanation}</Typography>
+          <Typography paragraph className={styles.cardtext}>
+            {props.explanation}
+          </Typography>
+          <a href={props.frontEndRepo}>
+            <Typography className={styles.a}>
+              Link to front end in GitHub Repository
+            </Typography>
+          </a>
+          <a href={props.backEndRepo}>
+            <Typography className={styles.a}>
+              Link to back end in GitHub Repository
+            </Typography>
+          </a>
         </CardContent>
       </Collapse>
     </Card>
