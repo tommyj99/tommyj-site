@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import IconButton from "@mui/material/IconButton";
-import styles from "../styles/Home.module.css";
 import { Box } from "@mui/system";
 import MenuIcon from "@mui/icons-material/Menu";
 import SideBarMenu from "../components/SideBarMenu";
