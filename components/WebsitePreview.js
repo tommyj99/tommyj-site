@@ -54,13 +54,12 @@ const WebsitePreview = (props) => {
       </CardContent>
       <CardActions disableSpacing>
         <ExpandMore
-          className={styles.cardtext}
           expand={expanded}
           onClick={handleExpandClick}
           aria-expanded={expanded}
           aria-label="show more"
         >
-          <ExpandMoreIcon />
+          <ExpandMoreIcon className={styles.cardtext} />
         </ExpandMore>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
