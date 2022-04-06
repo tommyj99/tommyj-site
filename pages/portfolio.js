@@ -4,28 +4,32 @@ import { Box } from "@mui/system";
 import HomeIcon from "@mui/icons-material/Home";
 import IconButton from "@mui/material/IconButton";
 import { useRouter } from "next/router";
-import { Button } from "@mui/material";
-
+import WebsitePreview from "../components/WebsitePreview";
+import { newsSiteDescription } from "../components/descriptions";
+import styles from "../styles/WebsitePreview.module.css";
 const Portfolio = () => {
   const router = useRouter();
+
   return (
-    <Box
-      style={{
-        display: "flex",
-      }}
-    >
+    <Box>
       <Box
         style={{
-          position: "fixed",
+          display: "flex",
         }}
       >
-        <IconButton onClick={() => router.push("/")}>
-          <HomeIcon
-            style={{
-              color: "firebrick",
-            }}
-          />
-        </IconButton>
+        <Box
+          style={{
+            position: "fixed",
+          }}
+        >
+          <IconButton onClick={() => router.push("/")}>
+            <HomeIcon
+              style={{
+                color: "#e5e5e5",
+              }}
+            />
+          </IconButton>
+        </Box>
       </Box>
       <Box
         style={{
@@ -33,24 +37,35 @@ const Portfolio = () => {
           display: "flex",
           flexDirection: "column",
           width: "100%",
-          minHeight: "100vh",
+          minHeight: "10vh",
         }}
       >
         <Typography
           style={{
-            color: "firebrick",
-            marginTop: "10%",
+            color: "#e5e5e5",
+            marginTop: "2%",
             marginBottom: "5%",
           }}
           variant="h3"
         >
           Portfolio Projects
         </Typography>
-        <Button
-          onClick={() => router.push("https://news-site-tommyj99.vercel.app/")}
-        >
-          News Page
-        </Button>
+      </Box>
+      <Box
+        style={{
+          alignItems: "left",
+          paddingLeft: "10vh",
+          width: "100%",
+          minHeight: "100vh",
+        }}
+      >
+        <WebsitePreview
+          image={"/NewsSite.png"}
+          url={"https://news-site-tommyj99.vercel.app/"}
+          title={"News Site"}
+          altText={"News Site image"}
+          description={newsSiteDescription}
+        />
       </Box>
     </Box>
   );
