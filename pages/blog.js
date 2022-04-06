@@ -8,54 +8,56 @@ import { useRouter } from "next/router";
 const Blog = () => {
   const router = useRouter();
   return (
-    <Box
-      style={{
-        display: "flex",
-      }}
-    >
+    <Box>
       <Box
         style={{
-          position: "fixed",
-        }}
-      >
-        <IconButton onClick={() => router.push("/")}>
-          <HomeIcon
-            style={{
-              color: "firebrick",
-            }}
-          />
-        </IconButton>
-      </Box>
-      <Box
-        style={{
-          backgroundImage: `url(/blog-const.webp)`,
-          backgroundSize: "100% 100%",
-          backgroundRepeat: "no-repeat",
-          alignItems: "center",
           display: "flex",
-          flexDirection: "column",
-          width: "100%",
-          minHeight: "100vh",
         }}
       >
-        <Typography
+        <Box
           style={{
-            color: "firebrick",
-            marginTop: "5%",
+            position: "fixed",
           }}
-          variant="h4"
         >
-          Blog/How To
-        </Typography>
-        <Typography
+          <IconButton onClick={() => router.push("/")}>
+            <HomeIcon
+              style={{
+                color: "#e5e5e5",
+              }}
+            />
+          </IconButton>
+        </Box>
+        <Box
           style={{
-            color: "firebrick",
-            marginTop: "2%",
+            // backgroundImage: `url(/blog-const.webp)`,
+            // backgroundSize: "100% 100%",
+            // backgroundRepeat: "no-repeat",
+            alignItems: "center",
+            display: "flex",
+            flexDirection: "column",
+            width: "100%",
+            minHeight: "100vh",
           }}
-          variant="h6"
         >
-          This page is under construction!
-        </Typography>
+          <Typography
+            style={{
+              color: "#e5e5e5",
+              marginTop: "3%",
+            }}
+            variant="h4"
+          >
+            Blog/How To
+          </Typography>
+          <Typography
+            style={{
+              color: "#e5e5e5",
+              marginTop: "2%",
+            }}
+            variant="h6"
+          >
+            This page is under construction!
+          </Typography>
+        </Box>
       </Box>
     </Box>
   );

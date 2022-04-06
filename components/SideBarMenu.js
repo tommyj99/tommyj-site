@@ -31,7 +31,7 @@ const SideBarMenu = () => {
     <Paper>
       <MenuList
         style={{
-          backgroundColor: "antiquewhite",
+          backgroundColor: "white",
         }}
       >
         {menuList.map((item, index) => {
@@ -44,7 +44,7 @@ const SideBarMenu = () => {
               >
                 <ListItemText
                   style={{
-                    color: "firebrick",
+                    color: "#660066",
                   }}
                 >
                   <Typography>{item.component}</Typography>

@@ -5,6 +5,18 @@
   .border:hover {
     border-style: solid;
       border-color: magenta;
-      border-width: 1px;
+      border-width: 2px;
+  }
+
+  .cardtext {
+    color: #5e5e5e;
+  }
+
+  .a {
+    color: #5e5e5e;
+  }
+
+  .a:hover {
+    color: blue;
   }
 

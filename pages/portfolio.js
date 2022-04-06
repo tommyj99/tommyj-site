@@ -5,8 +5,12 @@ import HomeIcon from "@mui/icons-material/Home";
 import IconButton from "@mui/material/IconButton";
 import { useRouter } from "next/router";
 import WebsitePreview from "../components/WebsitePreview";
-import { newsSiteDescription } from "../components/descriptions";
-import styles from "../styles/WebsitePreview.module.css";
+import {
+  newsSiteDescription,
+  newsSiteExplanation,
+  newsSiteFrontEndRepo,
+  newsSiteBackEndRepo,
+} from "../components/descriptions";
 const Portfolio = () => {
   const router = useRouter();
 
@@ -46,7 +50,7 @@ const Portfolio = () => {
             marginTop: "2%",
             marginBottom: "5%",
           }}
-          variant="h3"
+          variant="h4"
         >
           Portfolio Projects
         </Typography>
@@ -65,6 +69,9 @@ const Portfolio = () => {
           title={"News Site"}
           altText={"News Site image"}
           description={newsSiteDescription}
+          explanation={newsSiteExplanation}
+          frontEndRepo={newsSiteFrontEndRepo}
+          backEndRepo={newsSiteBackEndRepo}
         />
       </Box>
     </Box>
