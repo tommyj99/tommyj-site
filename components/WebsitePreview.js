@@ -72,11 +72,6 @@ const WebsitePreview = (props) => {
               Link to front end in GitHub Repository
             </Typography>
           </a>
-          <a href={props.backEndRepo}>
-            <Typography className={styles.a}>
-              Link to back end in GitHub Repository
-            </Typography>
-          </a>
         </CardContent>
       </Collapse>
     </Card>
