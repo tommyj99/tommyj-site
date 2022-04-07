@@ -5,11 +5,12 @@ export const newsSiteDescription =
   "and repo locations.";
 
 export const newsSiteExplanation =
-  "This project was built using React with NextJs and uses the free version of NewsAPI. The React front end " +
-  "is hosted on Vercel while the ExpressJS back end is hosted on Heroku. It uses Axios " +
-  "to make the API calls and SWR to return api data from a cache while automatically revalidating the data " +
-  "behind the scenes. This makes the rendering very fast after the first call to the API.";
+  "This project was built using React with NextJs and uses the free version of NewsAPI. " +
+  "The React front end is hosted on Vercel. A library called SWR is used to create a react hook " +
+  "that accesses the NextJs/api/server file, and API call within the React folder structure. This allows " +
+  "the server to work within the front end folder structure and not have to be hosted " +
+  "separately. Axios is used to make the API calls and NextJs is used to resolve cors and return " +
+  "api data from a cache, while automatically revalidating that cache behind the scenes. " +
+  "This makes the rendering very fast after the first call to the API.";
 
 export const newsSiteFrontEndRepo = "https://github.com/tommyj99/news-site.git";
-export const newsSiteBackEndRepo =
-  "https://github.com/tommyj99/api-relay-tommyj.git";
