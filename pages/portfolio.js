@@ -58,7 +58,7 @@ const Portfolio = () => {
       <Box
         style={{
           alignItems: "left",
-          paddingLeft: "5vh",
+          paddingLeft: "3%",
           width: "100%",
           minHeight: "100vh",
         }}
