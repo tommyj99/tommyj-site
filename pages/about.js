@@ -49,12 +49,15 @@ const About = () => {
           </Typography>
           <Typography
             style={{
+              display: "block",
               color: "#e5e5e5",
               marginTop: "2%",
             }}
             variant="h6"
           >
-            This page is under construction!
+            Hi, My name is Thomas and I am a software developer. Although I have
+            experience in several different areas, my main focus is React front
+            end development.
           </Typography>
         </Box>
       </Box>
