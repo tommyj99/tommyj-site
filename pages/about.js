@@ -55,9 +55,41 @@ const About = () => {
             }}
             variant="h6"
           >
-            Hi, My name is Thomas and I am a software developer. Although I have
-            experience in several different areas, my main focus is React front
-            end development.
+            Hi, my name is Thomas Jacques and I am a software developer.
+            Although I have varying amounts of experience in several different
+            areas, my main focus is React front end development. I pride myself
+            in continuously improving my knowledge and keeping up with the
+            latest React based libraries and components. My teammates have told
+            me I have a very high focus and concentration level and I am like a
+            bulldog on a porkchop when it comes to solving difficult problems.
+          </Typography>
+          <cr />
+          <Typography
+            style={{
+              display: "block",
+              color: "#e5e5e5",
+              marginTop: "2%",
+            }}
+            variant="h6"
+          >
+            I believe it is this focus and concentration that has contributed to
+            some of the recently successful teams I have been involved with -
+            team efforts that have completed such projects as a data auditing
+            and verification tool and a gps based flight scenario generator.
+          </Typography>
+          <cr />
+          <Typography
+            style={{
+              display: "block",
+              color: "#e5e5e5",
+              marginTop: "2%",
+            }}
+            variant="h6"
+          >
+            These same attributes have served me well in personal React
+            projects, which you can view on my portfolio page, and personal
+            recreational endeavors, such as becoming an expert guitar player,
+            riding motorcycles, or playing golf.
           </Typography>
         </Box>
       </Box>
