@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 
 const About = () => {
   const router = useRouter();
+
   return (
     <Box
     // style={{
@@ -101,7 +102,7 @@ const About = () => {
           align="left"
         >
           By the way, this website was also developed from scratch using React
-          and NextJs. Feel free to contact me at blahblahblah.com.
+          and NextJs. Feel free to contact me at tommyj@tommyj.net
         </Typography>
       </Box>
     </Box>
