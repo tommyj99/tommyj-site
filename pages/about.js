@@ -1,3 +1,4 @@
+import React from "react";
 import { Typography } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import IconButton from "@mui/material/IconButton";
@@ -5,9 +6,57 @@ import { Box } from "@mui/system";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import profilePic from "../public/profile.jpg";
+import { useRef } from "react";
 
 const About = () => {
+  const [isImageSmall, setIsImageSmall] = React.useState(false);
+  const [width, setWidth] = React.useState();
   const router = useRouter();
+  const typoRef = useRef();
+
+  React.useEffect(() => {
+    window.addEventListener("resize", getTypoWidth);
+    getTypoWidth();
+  }, []);
+
+  const getTypoWidth = () => {
+    if (typoRef.current !== null) {
+      setWidth(typoRef.current.offsetWidth);
+    }
+  };
+
+  const PicRenderLoc1 = () => {
+    if (width <= 590) {
+      return (
+        <Box
+          sx={{
+            marginTop: "5px",
+            marginLeft: "35px",
+          }}
+        >
+          <Image src={profilePic} height={80} width={65}></Image>
+        </Box>
+      );
+    }
+    return null;
+  };
+
+  const PicRenderLoc2 = () => {
+    if (width > 590) {
+      return (
+        <Box
+          sx={{
+            marginLeft: width <= 590 ? "35px" : "0px",
+            marginRight: "20px",
+            marginTop: "30px",
+          }}
+        >
+          <Image src={profilePic} height={2048} width={1700}></Image>
+        </Box>
+      );
+    }
+    return null;
+  };
 
   return (
     <Box>
@@ -35,17 +84,19 @@ const About = () => {
         Thomas Jacques
       </Typography>
       <Box
+        ref={typoRef}
         sx={{
           display: "flex",
-          //alignItems: "center",
+          flexWrap: width <= 590 ? "wrap" : undefined,
           width: "100%",
           minHeight: "100vh",
         }}
       >
+        <PicRenderLoc1 />
         <Box>
           <Typography
             style={{
-              marginLeft: "50px",
+              marginLeft: "35px",
               marginRight: "10px",
               color: "#e5e5e5",
               marginTop: "20px",
@@ -62,7 +113,7 @@ const About = () => {
           </Typography>
           <Typography
             style={{
-              marginLeft: "50px",
+              marginLeft: "35px",
               marginRight: "10px",
               color: "#e5e5e5",
               marginTop: "2%",
@@ -77,7 +128,7 @@ const About = () => {
           </Typography>
           <Typography
             style={{
-              marginLeft: "50px",
+              marginLeft: "35px",
               marginRight: "10px",
               color: "#e5e5e5",
               marginTop: "2%",
@@ -93,7 +144,7 @@ const About = () => {
           </Typography>
           <Typography
             sx={{
-              marginLeft: "50px",
+              marginLeft: "35px",
               marginRight: "10px",
               color: "#e5e5e5",
               marginTop: "2%",
@@ -105,14 +156,7 @@ const About = () => {
             and NextJs. Feel free to contact me at tommyj@tommyj.net
           </Typography>
         </Box>
-        <Box
-          sx={{
-            marginTop: "30px",
-            marginRight: "20px",
-          }}
-        >
-          <Image src={profilePic} height={2048} width={1700}></Image>
-        </Box>
+        <PicRenderLoc2 />
       </Box>
     </Box>
   );
