@@ -57,12 +57,44 @@ const Portfolio = () => {
       </Box>
       <Box
         style={{
+          display: "flex",
+          flexWrap: "wrap",
           alignItems: "left",
           paddingLeft: "5%",
           width: "100%",
           minHeight: "100vh",
         }}
       >
+        <WebsitePreview
+          image={"/NewsSite.png"}
+          url={"https://news-site-tommyj99.vercel.app/"}
+          title={"News Site"}
+          altText={"News Site image"}
+          description={newsSiteDescription}
+          explanation={newsSiteExplanation}
+          frontEndRepo={newsSiteFrontEndRepo}
+          backEndRepo={newsSiteBackEndRepo}
+        />
+        <WebsitePreview
+          image={"/NewsSite.png"}
+          url={"https://news-site-tommyj99.vercel.app/"}
+          title={"News Site"}
+          altText={"News Site image"}
+          description={newsSiteDescription}
+          explanation={newsSiteExplanation}
+          frontEndRepo={newsSiteFrontEndRepo}
+          backEndRepo={newsSiteBackEndRepo}
+        />
+        <WebsitePreview
+          image={"/NewsSite.png"}
+          url={"https://news-site-tommyj99.vercel.app/"}
+          title={"News Site"}
+          altText={"News Site image"}
+          description={newsSiteDescription}
+          explanation={newsSiteExplanation}
+          frontEndRepo={newsSiteFrontEndRepo}
+          backEndRepo={newsSiteBackEndRepo}
+        />
         <WebsitePreview
           image={"/NewsSite.png"}
           url={"https://news-site-tommyj99.vercel.app/"}
