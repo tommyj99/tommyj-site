@@ -1,5 +1,6 @@
 import * as React from "react";
 import { styled } from "@mui/material/styles";
+import { Box } from "@mui/system";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
@@ -30,51 +31,59 @@ const WebsitePreview = (props) => {
   };
 
   return (
-    <Card
+    <Box
       sx={{
-        maxWidth: 345,
-        padding: "5px",
-        backgroundColor: "black",
+        marginRight: "10px",
+        marginBottom: "10px",
       }}
     >
-      <CardHeader className={styles.cardtext} title={props.title} />
-      <a href={props.url}>
-        <CardMedia
-          className={styles.border}
-          component="img"
-          height="194"
-          image={props.image}
-          alt={props.altText}
-        />
-      </a>
-      <CardContent>
-        <Typography variant="body2" className={styles.cardtext}>
-          {props.description}
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <ExpandMore
-          expand={expanded}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon className={styles.cardtext} />
-        </ExpandMore>
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
+      <Card
+        sx={{
+          minHeight: 550,
+          maxWidth: 345,
+          padding: "5px",
+          backgroundColor: "black",
+        }}
+      >
+        <CardHeader className={styles.cardtext} title={props.title} />
+        <a href={props.url}>
+          <CardMedia
+            className={styles.border}
+            component="img"
+            height="194"
+            image={props.image}
+            alt={props.altText}
+          />
+        </a>
         <CardContent>
-          <Typography paragraph className={styles.cardtext}>
-            {props.explanation}
+          <Typography variant="body2" className={styles.cardtext}>
+            {props.description}
           </Typography>
-          <a href={props.frontEndRepo}>
-            <Typography className={styles.a}>
-              Link to front end in GitHub Repository
-            </Typography>
-          </a>
         </CardContent>
-      </Collapse>
-    </Card>
+        <CardActions disableSpacing>
+          <ExpandMore
+            expand={expanded}
+            onClick={handleExpandClick}
+            aria-expanded={expanded}
+            aria-label="show more"
+          >
+            <ExpandMoreIcon className={styles.cardtext} />
+          </ExpandMore>
+        </CardActions>
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <CardContent>
+            <Typography paragraph className={styles.cardtext}>
+              {props.explanation}
+            </Typography>
+            <a href={props.frontEndRepo}>
+              <Typography className={styles.a}>
+                Link to code in GitHub Repository
+              </Typography>
+            </a>
+          </CardContent>
+        </Collapse>
+      </Card>
+    </Box>
   );
 };
 
