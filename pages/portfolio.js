@@ -8,8 +8,10 @@ import WebsitePreview from "../components/WebsitePreview";
 import {
   newsSiteDescription,
   newsSiteExplanation,
-  newsSiteFrontEndRepo,
-  newsSiteBackEndRepo,
+  newsSiteRepo,
+  cryptoSiteDescription,
+  cryptoSiteExplanation,
+  cryptoSiteRepo,
 } from "../components/descriptions";
 const Portfolio = () => {
   const router = useRouter();
@@ -56,11 +58,11 @@ const Portfolio = () => {
         </Typography>
       </Box>
       <Box
+        justifyContent={"center"}
         style={{
           display: "flex",
           flexWrap: "wrap",
-          alignItems: "left",
-          paddingLeft: "5%",
+          paddingLeft: "35px",
           width: "100%",
           minHeight: "100vh",
         }}
@@ -72,38 +74,18 @@ const Portfolio = () => {
           altText={"News Site image"}
           description={newsSiteDescription}
           explanation={newsSiteExplanation}
-          frontEndRepo={newsSiteFrontEndRepo}
-          backEndRepo={newsSiteBackEndRepo}
+          frontEndRepo={newsSiteRepo}
+          backEndRepo={null}
         />
         <WebsitePreview
-          image={"/NewsSite.png"}
-          url={"https://news-site-tommyj99.vercel.app/"}
-          title={"News Site"}
-          altText={"News Site image"}
-          description={newsSiteDescription}
-          explanation={newsSiteExplanation}
-          frontEndRepo={newsSiteFrontEndRepo}
-          backEndRepo={newsSiteBackEndRepo}
-        />
-        <WebsitePreview
-          image={"/NewsSite.png"}
-          url={"https://news-site-tommyj99.vercel.app/"}
-          title={"News Site"}
-          altText={"News Site image"}
-          description={newsSiteDescription}
-          explanation={newsSiteExplanation}
-          frontEndRepo={newsSiteFrontEndRepo}
-          backEndRepo={newsSiteBackEndRepo}
-        />
-        <WebsitePreview
-          image={"/NewsSite.png"}
-          url={"https://news-site-tommyj99.vercel.app/"}
-          title={"News Site"}
-          altText={"News Site image"}
-          description={newsSiteDescription}
-          explanation={newsSiteExplanation}
-          frontEndRepo={newsSiteFrontEndRepo}
-          backEndRepo={newsSiteBackEndRepo}
+          image={"/CryptoDashboard.png"}
+          url={"https://my-crypto-dashboard.vercel.app/"}
+          title={"Crypto Site"}
+          altText={"Crypto Site image"}
+          description={cryptoSiteDescription}
+          explanation={cryptoSiteExplanation}
+          frontEndRepo={cryptoSiteRepo}
+          backEndRepo={null}
         />
       </Box>
     </Box>

@@ -39,6 +39,7 @@ const WebsitePreview = (props) => {
     >
       <Card
         sx={{
+          minHeight: 550,
           maxWidth: 345,
           padding: "5px",
           backgroundColor: "black",
@@ -76,7 +77,7 @@ const WebsitePreview = (props) => {
             </Typography>
             <a href={props.frontEndRepo}>
               <Typography className={styles.a}>
-                Link to front end in GitHub Repository
+                Link to code in GitHub Repository
               </Typography>
             </a>
           </CardContent>
